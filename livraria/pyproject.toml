@@ -1,0 +1,17 @@
+[project]
+name = "livraria"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Isadora Alcantara", email = "isadoraalca405@gmail.com"},
+]
+dependencies = [
+    "django>=5.0.6",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
