@@ -9,6 +9,8 @@ from drf_spectacular.views import (
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+from usuario.router import router as usuario_router
+
 from livraria.views import AutorViewSet, CategoriaViewSet, EditoraViewSet, LivroViewSet
 
 router = DefaultRouter()
@@ -37,4 +39,5 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
+    path("api/", include(usuario_router.urls)),
 ]
